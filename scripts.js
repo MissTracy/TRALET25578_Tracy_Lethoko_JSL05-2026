@@ -8,28 +8,28 @@ import { initialTasks } from "./initialData.js";
  * @param {string} task.status - Status column: 'todo', 'doing', or 'done'.
  * @returns {HTMLElement} The created task div element.
  */
-function createTaskElement(task) {
-  const taskDiv = document.createElement("div");
-  taskDiv.className = "task-div";
-  taskDiv.textContent = task.title;
-  taskDiv.dataset.taskId = task.id;
+// function createTaskElement(task) {
+//   const taskDiv = document.createElement("div");
+//   taskDiv.className = "task-div";
+//   taskDiv.textContent = task.title;
+//   taskDiv.dataset.taskId = task.id;
 
-  taskDiv.addEventListener("click", () => {
-    openTaskModal(task);
-  });
+//   taskDiv.addEventListener("click", () => {
+//     openTaskModal(task);
+//   });
 
-  return taskDiv;
-}
+//   return taskDiv;
+// }
 
 /**
  * Finds the task container element based on task status.
  * @param {string} status - The task status ('todo', 'doing', or 'done').
  * @returns {HTMLElement|null} The container element, or null if not found.
  */
-function getTaskContainerByStatus(status) {
-  const column = document.querySelector(`.column-div[data-status="${status}"]`);
-  return column ? column.querySelector(".tasks-container") : null;
-}
+// function getTaskContainerByStatus(status) {
+//   const column = document.querySelector(`.column-div[data-status="${status}"]`);
+//   return column ? column.querySelector(".tasks-container") : null;
+// }
 
 /**
  * Clears all existing task-divs from all task containers.
@@ -45,32 +45,32 @@ function clearExistingTasks() {
  * Groups tasks by status and appends them to their respective columns.
  * @param {Array<Object>} tasks - Array of task objects.
  */
-function renderTasks(tasks) {
-  tasks.forEach((task) => {
-    const container = getTaskContainerByStatus(task.status);
-    if (container) {
-      const taskElement = createTaskElement(task);
-      container.appendChild(taskElement);
-    }
-  });
-}
+// function renderTasks(tasks) {
+//   tasks.forEach((task) => {
+//     const container = getTaskContainerByStatus(task.status);
+//     if (container) {
+//       const taskElement = createTaskElement(task);
+//       container.appendChild(taskElement);
+//     }
+//   });
+// }
 
 /**
  * Opens the modal dialog with pre-filled task details.
  * @param {Object} task - The task object to display in the modal.
  */
-function openTaskModal(task) {
-  const modal = document.getElementById("task-modal");
-  const titleInput = document.getElementById("task-title");
-  const descInput = document.getElementById("task-desc");
-  const statusSelect = document.getElementById("task-status");
+// function openTaskModal(task) {
+//   const modal = document.getElementById("task-modal");
+//   const titleInput = document.getElementById("task-title");
+//   const descInput = document.getElementById("task-desc");
+//   const statusSelect = document.getElementById("task-status");
 
-  titleInput.value = task.title;
-  descInput.value = task.description;
-  statusSelect.value = task.status;
+//   titleInput.value = task.title;
+//   descInput.value = task.description;
+//   statusSelect.value = task.status;
 
-  modal.showModal();
-}
+//   modal.showModal();
+// }
 
 /**
  * Sets up modal close behavior.
