@@ -13,7 +13,7 @@ function getTaskContainerByStatus(status) {
    * @param {Object} task - Task data object.
    * @param {string} task.title - Title of the task.
    * @param {number} task.id - Unique task ID.
-   * @param {string} task.status - Status column: 'todo', 'doing', or 'done'.
+   * @param {st/[[][ring} task.status - Status column: 'todo', 'doing', or 'done'.
    * @param {Function} onClick - The function to run when the task is clicked.
    * @returns {HTMLElement} The created task div element.
    */

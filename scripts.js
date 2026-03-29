@@ -1,4 +1,4 @@
-import { initialTasks } from "./initialData.js";
+// import { initialTasks } from "./initialData.js";
 
 /**
  * Creates a single task DOM element.
@@ -75,23 +75,23 @@ function clearExistingTasks() {
 /**
  * Sets up modal close behavior.
  */
-function setupModalCloseHandler() {
-  const modal = document.getElementById("task-modal");
-  const closeBtn = document.getElementById("close-modal-btn");
+// function setupModalCloseHandler() {
+//   const modal = document.getElementById("task-modal");
+//   const closeBtn = document.getElementById("close-modal-btn");
 
-  closeBtn.addEventListener("click", () => {
-    modal.close();
-  });
-}
+//   closeBtn.addEventListener("click", () => {
+//     modal.close();
+//   });
+// }
 
 /**
  * Initializes the task board and modal handlers.
  */
-function initTaskBoard() {
-  clearExistingTasks();
-  renderTasks(initialTasks);
-  setupModalCloseHandler();
-}
+// function initTaskBoard() {
+//   clearExistingTasks();
+//   renderTasks(initialTasks);
+//   setupModalCloseHandler();
+// }
 
 // Wait until DOM is fully loaded
-document.addEventListener("DOMContentLoaded", initTaskBoard);
+// document.addEventListener("DOMContentLoaded", initTaskBoard);

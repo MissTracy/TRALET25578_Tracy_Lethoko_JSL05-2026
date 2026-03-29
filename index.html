@@ -14,7 +14,7 @@
       sizes="32x32"
       href="./assets/favicon.svg"
     />
-    <script defer src="./scripts.js" type="module"></script>
+    <script defer src="./scripts/main.js" type="module"></script>
     <title>Kanban Task Management</title>
   </head>
 
@@ -44,6 +44,7 @@
             Launch Career
           </h2>
         </div>
+        <button class="task-btn" id="add-task-btn">+ Add New Task</button>
       </header>
 
       <div class="container">
@@ -83,24 +84,36 @@
       <form method="dialog" id="task-form">
         <div class="modal-header">
           <h3>Task</h3>
-          <button type="button" class="close-btn" id="close-modal-btn">
-            &times;
-          </button>
+          <button type="button" class="close-btn" id="close-modal-btn">&times;</button>
         </div>
-
+    
         <label for="task-title">Title</label>
-        <input type="text" id="task-title" name="title" required />
-
+        <input 
+          type="text" 
+          id="task-title" 
+          name="title" 
+          placeholder="e.g. Take chilled break" 
+          required 
+        />
+    
         <label for="task-desc">Description</label>
-        <textarea id="task-desc" name="description" rows="4"></textarea>
-
+        <textarea 
+          id="task-desc" 
+          name="description" 
+          rows="4" 
+          placeholder="e.g Pet your dog, have a cup of coffee, dance to your favourite song and come back to crush this challenge."
+        ></textarea>
+    
         <label for="task-status">Status</label>
         <select id="task-status" name="status" required>
           <option value="todo">todo</option>
           <option value="doing">doing</option>
           <option value="done">done</option>
         </select>
+        
+        <button type="submit" class="task-btn" id="create-task-btn">Create Task</button>
       </form>
     </dialog>
+    
   </body>
 </html>
